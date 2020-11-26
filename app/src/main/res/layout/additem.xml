@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+
+    >
+<androidx.cardview.widget.CardView
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+
+    app:cardCornerRadius="15dp"
+    >
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="5dp"
+        android:padding="5dp"
+        android:background="#FFFFFF">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:id="@+id/input">
+    <EditText
+        android:backgroundTint="@color/design_default_color_primary_variant"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:hint="Product Name"
+        android:layout_margin="10dp"
+        android:id="@+id/pName"
+        />
+        <androidx.appcompat.widget.AppCompatCheckBox
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:allowUndo="true"
+            android:text="Add Subtype"
+            android:id="@+id/radioSub"
+            />
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/singleType"
+            android:orientation="horizontal">
+            <EditText
+                android:layout_width="0px"
+                android:backgroundTint="@color/design_default_color_primary_variant"
+                android:layout_weight="1"
+                android:layout_height="50dp"
+                android:inputType="numberDecimal"
+                android:layout_margin="10dp"
+                android:id="@+id/pCP"
+                android:hint="Cost Price"
+                android:textAlignment="center"
+                />
+            <EditText
+                android:layout_width="0px"
+                android:backgroundTint="@color/design_default_color_primary_variant"
+                android:layout_weight="1"
+                android:layout_height="50dp"
+                android:hint="Selling Price"
+                android:inputType="numberDecimal"
+                android:layout_margin="10dp"
+                android:id="@+id/pSP"
+                android:textAlignment="center"
+                ></EditText>
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:id="@+id/multiple"
+            android:visibility="gone">
+        <androidx.recyclerview.widget.RecyclerView
+            android:layout_width="match_parent"
+            android:id="@+id/subList"
+            android:layout_height="150dp"/>
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="50dp"
+            android:text="Add Row"
+            android:id="@+id/addRow"
+            android:textAllCaps="false"/>
+        </LinearLayout>
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <Button
+                android:layout_width="80dp"
+                android:layout_height="50dp"
+                app:cornerRadius="10dp"
+                android:text="Delete"
+                android:visibility="gone"
+                android:id="@+id/deleteButton"
+                android:textAllCaps="false"
+                android:layout_alignParentLeft="true"
+                >
+
+            </Button>
+            <Button
+            android:layout_width="80dp"
+            android:layout_height="50dp"
+            app:cornerRadius="10dp"
+            android:text="Add"
+            android:id="@+id/addButton"
+            android:textAllCaps="false"
+            android:layout_alignParentRight="true"
+            >
+
+        </Button>
+        <Button
+            android:layout_width="80dp"
+            android:layout_height="50dp"
+            app:cornerRadius="10dp"
+            android:text="Cancel"
+            android:layout_toLeftOf="@id/addButton"
+            android:id="@+id/cancelButton"
+            android:textAllCaps="false"
+            >
+
+        </Button>
+        </RelativeLayout>
+    </LinearLayout>
+
+    </RelativeLayout>
+</androidx.cardview.widget.CardView>
+</LinearLayout>
